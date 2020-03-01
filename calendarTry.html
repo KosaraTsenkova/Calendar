@@ -9,7 +9,7 @@
 <body>
     <h1 id="month"></h1>
     <h1 id="year"></h1>
-    <table>
+    <table id="table">
         <tr>
         <th>Monday</th>
         <th>Tuesday</th>
@@ -73,7 +73,21 @@
     <br>
     <br>
 
-    <label for="year"></label><select id="yearChange" onchange="jump()">
+    </label><select id="monthChange" onchange="jump()">
+    <option id="0">Jan</option>
+    <option id="1">Feb</option>
+    <option id="2">Mar</option>
+    <option id="3">Apr</option>
+    <option id="4">May</option>
+    <option id="5">Jun</option>
+    <option id="6">July</option>
+    <option id="7">Aug</option>
+    <option id="8">Sep</option>
+    <option id="9">Oct</option>
+    <option id="10">Nov</option>
+    <option id="11">Dec</option>
+    </select>
+    </label><select id="yearChange" onchange="jump()">
         <option value=1990>1990</option>
         <option value=1991>1991</option>
         <option value=1992>1992</option>
@@ -108,6 +122,12 @@
         <option value=2021>2021</option>
         <option value=2022>2022</option>
     </select></form>
+
+    <form>
+        <label for="event">Add event name: </label><br>
+        <input type="text" id="event" name="event"><br>
+      </form>
+    <button onclick="getItemStorage()">Reload data</button> 
 
     <script src="calendarTryScript.js"></script>
 </body>
